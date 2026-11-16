@@ -17,13 +17,13 @@ pipeline {
 
         stage('Installation des dépendances') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
         stage('Lancement des tests') {
             steps {
-                bat 'pytest'
+                bat 'python -m pytest'
             }
         }
     }
